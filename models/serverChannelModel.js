@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const serverUserSchema = new mongoose.Schema({
+const serverChannelSchema = new mongoose.Schema({
   server_id: {
     type: String,
     required: true,
   },
-  group_id: {
+  channel_slack_id: {
     type: String,
-    required: false,
+    required: true,
   },
   name: {
     type: String,
@@ -15,4 +15,4 @@ const serverUserSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("ServerUser", serverUserSchema);
+export default mongoose.model("ServerChannel", serverChannelSchema);

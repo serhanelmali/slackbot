@@ -1,13 +1,17 @@
 import mongoose from "mongoose";
 
-const serverGroupSchema = new mongoose.Schema({
+const serverUserSchema = new mongoose.Schema({
   server_id: {
     type: String,
     required: true,
   },
-  group_slack_id: {
+  user_slack_id: {
     type: String,
     required: true,
+  },
+  group_id: {
+    type: String,
+    required: false,
   },
   name: {
     type: String,
@@ -15,4 +19,4 @@ const serverGroupSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("ServerGroup", serverGroupSchema);
+export default mongoose.model("ServerUser", serverUserSchema);
