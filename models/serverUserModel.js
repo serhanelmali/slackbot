@@ -17,6 +17,14 @@ const serverUserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  total_points: {
+    type: Number,
+    required: true,
+  },
+  weekly_points: {
+    type: Number,
+    required: true,
+  },
 });
 
 export default mongoose.model("ServerUser", serverUserSchema);
